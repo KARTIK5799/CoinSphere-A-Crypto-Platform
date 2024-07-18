@@ -1,49 +1,49 @@
 'use strict';
 let coinData = null;
 
-let seeAll=false;
+let seeAll = false;
 
-let seeAllButton=document.querySelector('.btn-link').addEventListener('click',function(){
-    seeAll=!seeAll
-    fetchAllCoinData(); 
+let seeAllButton = document.querySelector('.btn-link').addEventListener('click', function () {
+    seeAll = !seeAll
+    fetchAllCoinData();
 
 })
 
 
 const fetchAllCoinData = function (curr) {
-  const options = {
-    method: 'GET',
-    headers: {
-      accept: 'application/json',
-      'x-cg-demo-api-key': 'CG-xzgRNztXu24NskufskZ7P2mZ'
-    }
-  };
+    const options = {
+        method: 'GET',
+        headers: {
+            accept: 'application/json',
+            'x-cg-demo-api-key': 'CG-xzgRNztXu24NskufskZ7P2mZ'
+        }
+    };
 
-  fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd', options)
-    .then(response => response.json())
-    .then(response => {
-      coinData = response;
-     if(seeAll){
-        populateTable(coinData)
-     }else{
-        populateTable(coinData.slice(0,10))
-     };
-      populateCards(coinData.slice(0,4))
-    })
-    .catch(error => {
-      console.error('Error fetching coin data:', error);
-    });
+    fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd', options)
+        .then(response => response.json())
+        .then(response => {
+            coinData = response;
+            if (seeAll) {
+                populateTable(coinData)
+            } else {
+                populateTable(coinData.slice(0, 10))
+            };
+            populateCards(coinData.slice(0, 4))
+        })
+        .catch(error => {
+            console.error('Error fetching coin data:', error);
+        });
 };
 
 fetchAllCoinData();
 
 const populateTable = function (data) {
-  const tbody = document.querySelector('.table-body');
-  tbody.innerHTML = ''; 
-  data.forEach((coin, index) => {
-    const row = document.createElement('tr');
-    row.classList.add("table-row");
-    row.innerHTML = `
+    const tbody = document.querySelector('.table-body');
+    tbody.innerHTML = '';
+    data.forEach((coin, index) => {
+        const row = document.createElement('tr');
+        row.classList.add("table-row");
+        row.innerHTML = `
       <td class="table-data">
       
         <button class="add-to-fav" aria-label="Add to favourite" data-add-to-fav>
@@ -71,48 +71,48 @@ const populateTable = function (data) {
       </td>
     
     `;
-    tbody.appendChild(row);
-  });
+        tbody.appendChild(row);
+    });
 };
 
-document.getElementById('search-button').addEventListener('click', function() {
-  const searchValue = document.getElementById('coin-search').value;
-  window.location.href = `cryptoresult.html?search=${encodeURIComponent(searchValue)}`;
+document.getElementById('search-button').addEventListener('click', function () {
+    const searchValue = document.getElementById('coin-search').value;
+    window.location.href = `cryptoresult.html?search=${encodeURIComponent(searchValue)}`;
 });
 
 
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const params = new URLSearchParams(window.location.search);
     const searchValue = params.get('search');
     console.log(searchValue);
-    if(searchValue){
+    if (searchValue) {
         fetchCoinData(searchValue)
     }
-  });
+});
 
 
-let coinDetail=null;
+let coinDetail = null;
 
 const fetchCoinData = function (coinId) {
-  const options = {
-    method: 'GET',
-    headers: {
-      accept: 'application/json',
-      'x-cg-demo-api-key': 'CG-xzgRNztXu24NskufskZ7P2mZ'
-    }
-  };
+    const options = {
+        method: 'GET',
+        headers: {
+            accept: 'application/json',
+            'x-cg-demo-api-key': 'CG-xzgRNztXu24NskufskZ7P2mZ'
+        }
+    };
 
-  fetch(`https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=${coinId}`, options)
-    .then(response => response.json())
-    .then(response => {
-        coinDetail=response
-     populateDetail(coinDetail[0])
-  
-    })
-    .catch(error => {
-      console.error('Error fetching coin data:', error);
-    });
+    fetch(`https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=${coinId}`, options)
+        .then(response => response.json())
+        .then(response => {
+            coinDetail = response
+            populateDetail(coinDetail[0])
+
+        })
+        .catch(error => {
+            console.error('Error fetching coin data:', error);
+        });
 };
 
 const populateDetail = function (coin) {
@@ -163,11 +163,11 @@ const populateDetail = function (coin) {
 
 function populateCards(data) {
     const cardSection = document.querySelector('.tab-content');
-    cardSection.innerHTML=''
+    cardSection.innerHTML = ''
     for (let i = 0; i < 4; i++) {
         const coin = data[i];
 
- 
+
         const listItem = document.createElement('li');
         listItem.innerHTML = `
             <div class="trend-card">
@@ -187,13 +187,7 @@ function populateCards(data) {
             </div>
         `;
 
-        
+
         cardSection.appendChild(listItem);
     }
 }
-
-
-
-
-
-
