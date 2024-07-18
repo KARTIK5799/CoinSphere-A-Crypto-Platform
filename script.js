@@ -134,6 +134,8 @@ const populateDetail = function (coin) {
             <h1 class="crypto-price">$${coin.current_price.toFixed(2)}</h1>
         </div>
 
+
+
         <div class="crypto-details">
             <div class="crypto-detail">
                 <h2>Crypto Market Rank</h2>
@@ -155,7 +157,10 @@ const populateDetail = function (coin) {
                 <h2>24 Hour Low</h2>
                 <p>$${coin.low_24h.toFixed(2)}</p>
             </div>
-        </div>`;
+        </div>
+    
+
+`;
 };
 
 
