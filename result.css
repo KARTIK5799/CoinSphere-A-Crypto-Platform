@@ -1,0 +1,129 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* General Styles */
+  body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  header h1 {
+    font-size: 24px;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  nav a:hover {
+    text-decoration: underline;
+  }
+  
+  .search-container {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .search-container input {
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .search-container button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .search-container button:hover {
+    background-color: #0056b3;
+  }
+  
+  main {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  
+  .coin-info {
+    text-align: center;
+  }
+  
+  .coin-info img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  
+  .coin-info h2 {
+    margin-top: 10px;
+    font-size: 24px;
+  }
+  
+  .coin-info p {
+    margin-top: 5px;
+    font-size: 18px;
+  }
+  
+  .coin-description {
+    margin-top: 20px;
+  }
+  
+  .coin-description h3 {
+    font-size: 22px;
+  }
+  
+  footer {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  @media (max-width: 600px) {
+    header {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    nav ul {
+      flex-direction: column;
+    }
+  
+    .search-container input {
+      width: 100%;
+    }
+  }
+  
