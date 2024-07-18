@@ -1,6 +1,6 @@
 To create a README file for your HTML file and associated assets (images), you can follow these steps:
 
-### Project Title: CoinSphere - Buy & Sell Digital Assets In The CoinSphere
+## Project Title: CoinSphere - Buy & Sell Digital Assets In The CoinSphere
 
 #### Project Description:
 CoinSphere is a website designed for trading digital assets, focusing on cryptocurrencies and related markets. It provides users with a seamless platform for buying, selling, and exploring various crypto assets.
@@ -42,7 +42,7 @@ CoinSphere is a website designed for trading digital assets, focusing on cryptoc
 - Submit a pull request with detailed information about your contributions.
 
 ### Credits:
-- Designed and developed by Kartik Sapkal.
+-developed by Kartik Sapkal.
 
 ### License:
 This project is licensed under the MIT License - see the LICENSE file for details.
