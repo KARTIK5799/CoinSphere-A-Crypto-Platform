@@ -172,6 +172,8 @@
     flex-direction: column;
     align-items: center;
 }
+
+
 .crypto-logo{
     height: 7rem;
     border: 2px solid white;
@@ -210,7 +212,49 @@ padding: 10px;
     font-size: 1.5rem;
     background:transparent;
     color: white;
-border: none;
+border: none;}
+
+
+.select-dropdown {
+    position: relative;
+    background-color: #272727;
+    border: 2px solid;
+    border-radius: 4px;
+    color: rgb(70, 70, 70); 
+  
+}
+
+.select-dropdown select {
+    font-size: 1.5rem;
+    font-weight: normal;
+    max-width: 100%;
+    padding: 8px 24px 8px 10px;
+    border: none;
+    background-color:transparent;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    color: white; 
+}
+
+.select-dropdown select:active,
+.select-dropdown select:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.select-dropdown:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    width: 0;
+    height: 0;
+    margin-top: -2px;
+    border-top: 5px solid #aaa;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+}
 
   }
   .search-form>input:focus{
@@ -624,6 +668,7 @@ border-radius: 50px;
     min-width: max-content;
     font-weight: var(--fw-700);
     transition: var(--transition-1);
+    cursor: pointer;
   }
   
   .market .btn-link:is(:hover, :focus) { color: var(--blue-crayola); }

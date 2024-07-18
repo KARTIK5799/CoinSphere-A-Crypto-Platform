@@ -10,7 +10,7 @@ let seeAllButton=document.querySelector('.btn-link').addEventListener('click',fu
 })
 
 
-const fetchAllCoinData = function () {
+const fetchAllCoinData = function (curr) {
   const options = {
     method: 'GET',
     headers: {
