@@ -35,8 +35,9 @@ CoinSphere is a website designed for trading digital assets, focusing on cryptoc
 
 2. Open `index.html` in a web browser to view the website locally.
 ### ScreenShots:
-![screencapture-127-0-0-1-5500-cryptoresult-html-2024-07-18-17_33_29](https://github.com/user-attachments/assets/e174ae0c-2105-4d9a-8c39-6201018e9686)
 ![screencapture-127-0-0-1-5500-2024-07-18-17_32_49](https://github.com/user-attachments/assets/b3177b55-ca39-4f73-9033-b68203f408b6)
+![screencapture-127-0-0-1-5500-cryptoresult-html-2024-07-18-17_33_29](https://github.com/user-attachments/assets/e174ae0c-2105-4d9a-8c39-6201018e9686)
+
 
 ### Contributing:
 - Fork the repository and make your changes.
